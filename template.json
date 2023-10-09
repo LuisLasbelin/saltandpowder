@@ -1,0 +1,99 @@
+{
+    "Actor": {
+        "types": [
+            "character",
+            "ship",
+            "npc"
+        ],
+        "character": {
+            "name": "",
+            "skills": {
+                "steel": {
+                    "max": "4",
+                    "value": 4,
+                    "wounds": 0,
+                    "scars": 0,
+                    "used_scars": 0
+                },
+                "powder": {
+                    "max": "4",
+                    "value": 4,
+                    "wounds": 0,
+                    "scars": 0,
+                    "used_scars": 0
+                },
+                "sea": {
+                    "max": "4",
+                    "value": 4,
+                    "wounds": 0,
+                    "scars": 0,
+                    "used_scars": 0
+                },
+                "earth": {
+                    "max": "4",
+                    "value": 4,
+                    "wounds": 0,
+                    "scars": 0,
+                    "used_scars": 0
+                },
+                "influence": {
+                    "max": "4",
+                    "value": 4,
+                    "wounds": 0,
+                    "scars": 0,
+                    "used_scars": 0
+                },
+                "tradition": {
+                    "max": "4",
+                    "value": 4,
+                    "wounds": 0,
+                    "scars": 0,
+                    "used_scars": 0
+                }
+            },
+            "stress": {
+                "max": 5,
+                "value": 0
+            },
+            "drunk": {
+                "dizzy": false,
+                "sick": false,
+                "drunk": false
+            },
+            "bag": [],
+            "weapons": [],
+            "ammo": [],
+            "drink": [],
+            "editingSkills": false,
+            "biography": ""
+        },
+        "ship": {
+            "name": "",
+            "value": "",
+            "description": "",
+            "type": "",
+            "other": ""
+        },
+        "npc": {
+            "name": ""
+        }
+    },
+    "Item": {
+        "types": [
+            "weapon",
+            "item"
+        ],
+        "item": {
+            "name": "",
+            "value": 0,
+            "formula": "d4",
+            "description": ""
+        },
+        "weapon": {
+            "name": "",
+            "value": 0,
+            "formula": "d4",
+            "description": ""
+        }
+    }
+}

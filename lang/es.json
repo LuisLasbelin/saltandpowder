@@ -1,0 +1,24 @@
+{
+  "ACTOR": {
+    "TypeCharacter": "Personaje",
+    "TypeShip": "Barco",
+    "TypeNpc": "PNJ"
+  },
+  "SAP.Steel": "Acero",
+  "SAP.Powder": "Pólvora",
+  "SAP.Sea": "Océano",
+  "SAP.Earth": "Tierra",
+  "SAP.Influence": "Influencia",
+  "SAP.Tradition": "Tradición",
+  
+  "SAP.Drink": "Beber",
+  "SAP.Stress": "Stress",
+  "SAP.Rest": "Dormir",
+  "SAP.Skills": "Habilidades",
+  "SAP.Items": "Objetos",
+  "SAP.Weapons": "Armas",
+  "SAP.Equipment": "Equipo",
+  "SAP.Notes": "Notas",
+  "SAP.Description": "Descripción",
+  "SAP.edit_skills": "Editar habilidades"
+}

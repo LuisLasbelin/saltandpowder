@@ -1,0 +1,94 @@
+<section>
+  <div class="flexrow">
+    <button class="btn-drink">{{localize 'SAP.Drink'}}</button>
+    <div class="drunk-indicator">
+      {{#if system.drunk.drunk}}
+      <div class="drunk active"></div>
+      {{else}}
+      <div class="drunk"></div>
+      {{/if}}
+      {{#if system.drunk.sick}}
+      <div class="drunk active"></div>
+      {{else}}
+      <div class="drunk"></div>
+      {{/if}}
+      {{#if system.drunk.dizzy}}
+      <div class="drunk active"></div>
+      {{else}}
+      <div class="drunk"></div>
+      {{/if}}
+    </div>
+    <button class="btn-rest">{{localize 'SAP.Rest'}}</button>
+    <button class="btn-editSkills">{{localize 'SAP.edit_skills'}}</button>
+  </div>
+  <div class="flexcolumn skills-grid">
+    {{#each system.skills as |skill name|}}
+    <div class="skill-container">
+      <button class="btn-reduce" data-skill={{name}}>-</button>
+      <img class="skill-dice rollable" data-roll="d{{skill.value}}" src={{skill.dice}} alt="d{{skill.value}}">
+      <button class="btn-augment" data-skill={{name}}>+</button>
+      <div class="skill-label">{{skill.label}}</div>
+      {{#if ../system.editingSkills}}
+      <select class="skill-max" name="system.skills.{{name}}.max" data-type="String">
+        {{#select skill.max}}
+        <option value="4">d4</option>
+        <option value="6">d6</option>
+        <option value="8">d8</option>
+        <option value="10">d10</option>
+        {{/select}}
+      </select>
+      {{else}}
+      <div class="skill-max">{{skill.max}}</div>
+      {{/if}}
+      <div class="flexcolumn">
+        <div style="display:flex;flex-direction:row;">
+          {{#if skill.wound1}}
+          <div data-skill={{name}} class="wound active"></div>
+          {{else}}
+          <div data-skill={{name}} class="wound"></div>
+          {{/if}}
+          {{#if skill.wound2}}
+          <div data-skill={{name}} class="wound active"></div>
+          {{else}}
+          <div data-skill={{name}} class="wound"></div>
+          {{/if}}
+          {{#if skill.wound3}}
+          <div data-skill={{name}} class="wound active"></div>
+          {{else}}
+          <div data-skill={{name}} class="wound"></div>
+          {{/if}}
+        </div>
+        <div style="display:flex;flex-direction:row;">
+          {{#if skill.scar1}}
+          <div data-skill={{name}} class="scar active"></div>
+          {{/if}}
+          {{#if skill.used1_scar}}
+          <div data-skill={{name}} class="scar inactive"></div>
+          {{/if}}
+          {{#unless skill.scar1}}
+          <div data-skill={{name}} class="scar"></div>
+          {{/unless}}
+          {{#if skill.scar2}}
+          <div data-skill={{name}} class="scar active"></div>
+          {{/if}}
+          {{#if skill.used2_scar}}
+          <div data-skill={{name}} class="scar inactive"></div>
+          {{/if}}
+          {{#unless skill.scar2}}
+          <div data-skill={{name}} class="scar"></div>
+          {{/unless}}
+          {{#if skill.scar3}}
+          <div data-skill={{name}} class="scar active"></div>
+          {{/if}}
+          {{#if skill.used3_scar}}
+          <div data-skill={{name}} class="scar inactive"></div>
+          {{/if}}
+          {{#unless skill.scar3}}
+          <div data-skill={{name}} class="scar"></div>
+          {{/unless}}
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</section>
