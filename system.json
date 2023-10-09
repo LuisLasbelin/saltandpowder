@@ -2,7 +2,7 @@
   "id": "saltandpowder",
   "title": "Salt and Powder",
   "description": "The Salt and Powder system for FoundryVTT!",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "compatibility": {
     "minimum": 11,
     "verified": "11.313",

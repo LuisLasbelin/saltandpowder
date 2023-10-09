@@ -59,33 +59,9 @@
           {{/if}}
         </div>
         <div style="display:flex;flex-direction:row;">
-          {{#if skill.scar1}}
-          <div data-skill={{name}} class="scar active"></div>
-          {{/if}}
-          {{#if skill.used1_scar}}
-          <div data-skill={{name}} class="scar inactive"></div>
-          {{/if}}
-          {{#unless skill.scar1}}
-          <div data-skill={{name}} class="scar"></div>
-          {{/unless}}
-          {{#if skill.scar2}}
-          <div data-skill={{name}} class="scar active"></div>
-          {{/if}}
-          {{#if skill.used2_scar}}
-          <div data-skill={{name}} class="scar inactive"></div>
-          {{/if}}
-          {{#unless skill.scar2}}
-          <div data-skill={{name}} class="scar"></div>
-          {{/unless}}
-          {{#if skill.scar3}}
-          <div data-skill={{name}} class="scar active"></div>
-          {{/if}}
-          {{#if skill.used3_scar}}
-          <div data-skill={{name}} class="scar inactive"></div>
-          {{/if}}
-          {{#unless skill.scar3}}
-          <div data-skill={{name}} class="scar"></div>
-          {{/unless}}
+          {{{skill.scar1_item}}}
+          {{{skill.scar2_item}}}
+          {{{skill.scar3_item}}}
         </div>
       </div>
     </div>

@@ -4,15 +4,13 @@
     "TypeShip": "Barco",
     "TypeNpc": "PNJ"
   },
-  "SAP.Steel": "Acero",
-  "SAP.Powder": "Pólvora",
-  "SAP.Sea": "Océano",
-  "SAP.Earth": "Tierra",
+  "SAP.Powder": "Plomo",
+  "SAP.Salt": "Sal",
   "SAP.Influence": "Influencia",
   "SAP.Tradition": "Tradición",
   
   "SAP.Drink": "Beber",
-  "SAP.Stress": "Stress",
+  "SAP.Stress": "Estrés",
   "SAP.Rest": "Dormir",
   "SAP.Skills": "Habilidades",
   "SAP.Items": "Objetos",
@@ -20,5 +18,7 @@
   "SAP.Equipment": "Equipo",
   "SAP.Notes": "Notas",
   "SAP.Description": "Descripción",
+  "SAP.Name": "Nombre",
+  "SAP.Dice": "Dados",
   "SAP.edit_skills": "Editar habilidades"
 }

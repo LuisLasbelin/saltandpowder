@@ -122,23 +122,26 @@ export class SaltAndPowderActorSheet extends ActorSheet {
 
     // Create booleans for each scar
     for (const key in context.system.skills) {
+      context.system.skills[key].scar1_item = `<div data-skill=${key} class="scar"></div>`;
+      context.system.skills[key].scar2_item = `<div data-skill=${key} class="scar"></div>`;
+      context.system.skills[key].scar3_item = `<div data-skill=${key} class="scar"></div>`;
       if (context.system.skills[key].scars > 0) {
-        context.system.skills[key].scar1 = true;
-        if (context.system.skills[key].used_scars > 0) {
-          context.system.skills[key].scar1_used = true;
-        }
+        context.system.skills[key].scar1_item = `<div data-skill=${key} class="scar active"></div>`;
       }
       if (context.system.skills[key].scars > 1) {
-        context.system.skills[key].scar2 = true;
-        if (context.system.skills[key].used_scars > 1) {
-          context.system.skills[key].scar2_used = true;
-        }
+        context.system.skills[key].scar2_item = `<div data-skill=${key} class="scar active"></div>`;
       }
       if (context.system.skills[key].scars > 2) {
-        context.system.skills[key].scar3 = true;
-        if (context.system.skills[key].used_scars > 2) {
-          context.system.skills[key].scar3_used = true;
-        }
+        context.system.skills[key].scar3_item = `<div data-skill=${key} class="scar active"></div>`;
+      }
+      if (context.system.skills[key].used_scars > 0) {
+        context.system.skills[key].scar1_item = `<div data-skill=${key} class="scar inactive"></div>`;
+      }
+      if (context.system.skills[key].used_scars > 1) {
+        context.system.skills[key].scar2_item = `<div data-skill=${key} class="scar inactive"></div>`;
+      }
+      if (context.system.skills[key].used_scars > 2) {
+        context.system.skills[key].scar3_item = `<div data-skill=${key} class="scar inactive"></div>`;
       }
     }
   }
@@ -209,7 +212,7 @@ export class SaltAndPowderActorSheet extends ActorSheet {
           } 
         }
       })
-    } else if (this.actor.system.stress.value < 4) {
+    } else if (this.actor.system.stress.value < this.actor.system.stress.max) {
       this.actor.update({
         system: {
           stress:{
@@ -257,7 +260,7 @@ export class SaltAndPowderActorSheet extends ActorSheet {
           skills: {
             [dataset.skill]: {
               scars: this.actor.system.skills[dataset.skill].scars - 1,
-              used_scars: this.actor.system.skills[dataset.skill].scars - 1
+              used_scars: this.actor.system.skills[dataset.skill].used_scars - 1
             }
           }
         }
@@ -267,8 +270,7 @@ export class SaltAndPowderActorSheet extends ActorSheet {
         system: {
           skills: {
             [dataset.skill]: {
-              scars: this.actor.system.skills[dataset.skill].scars - 1,
-              used_scars: this.actor.system.skills[dataset.skill].scars + 1
+              used_scars: this.actor.system.skills[dataset.skill].used_scars + 1
             }
           }
         }

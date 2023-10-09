@@ -8,13 +8,6 @@
         "character": {
             "name": "",
             "skills": {
-                "steel": {
-                    "max": "4",
-                    "value": 4,
-                    "wounds": 0,
-                    "scars": 0,
-                    "used_scars": 0
-                },
                 "powder": {
                     "max": "4",
                     "value": 4,
@@ -22,14 +15,7 @@
                     "scars": 0,
                     "used_scars": 0
                 },
-                "sea": {
-                    "max": "4",
-                    "value": 4,
-                    "wounds": 0,
-                    "scars": 0,
-                    "used_scars": 0
-                },
-                "earth": {
+                "salt": {
                     "max": "4",
                     "value": 4,
                     "wounds": 0,

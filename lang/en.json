@@ -1,2 +1,24 @@
 {
-}
+    "ACTOR": {
+      "TypeCharacter": "Character",
+      "TypeShip": "Ship",
+      "TypeNpc": "NPC"
+    },
+    "SAP.Powder": "Powder",
+    "SAP.Salt": "Salt",
+    "SAP.Influence": "Influence",
+    "SAP.Tradition": "Tradition",
+    
+    "SAP.Drink": "Drink",
+    "SAP.Stress": "Stress",
+    "SAP.Rest": "Sleep",
+    "SAP.Skills": "Skills",
+    "SAP.Items": "Items",
+    "SAP.Weapons": "Weapons",
+    "SAP.Equipment": "Equipment",
+    "SAP.Notes": "Notes",
+    "SAP.Description": "Description",
+    "SAP.Name": "Name",
+    "SAP.Dice": "Dice",
+    "SAP.edit_skills": "Edit Skills"
+  }
