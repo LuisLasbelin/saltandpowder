@@ -1,7 +1,7 @@
 {
-  "name": "saltandpowder",
+  "name": "saltandlead",
   "version": "1.0.0",
-  "description": "CSS compiler for the SaltAndPowder system",
+  "description": "CSS compiler for the SaltAndLead system",
   "scripts": {
     "build": "gulp build",
     "compile": "gulp css",

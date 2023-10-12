@@ -1,7 +1,7 @@
 {
-  "id": "saltandpowder",
-  "title": "Salt and Powder",
-  "description": "The Salt and Powder system for FoundryVTT!",
+  "id": "saltandlead",
+  "title": "Salt and Lead",
+  "description": "The Salt and Lead system for FoundryVTT!",
   "version": "0.0.2",
   "compatibility": {
     "minimum": 11,
@@ -11,8 +11,8 @@
   "authors": [{
     "name": "Luis <Lasbelin> Belloch"
   }],
-  "esmodules": ["module/saltandpowder.mjs"],
-  "styles": ["css/saltandpowder.css"],
+  "esmodules": ["module/saltandlead.mjs"],
+  "styles": ["css/saltandlead.css"],
   "scripts": [],
   "packs": [],
   "languages": [

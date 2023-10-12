@@ -1,9 +1,9 @@
 // Import document classes.
-import { SaltAndPowderActor } from "./documents/actor.mjs";
-import { SaltAndPowderItem } from "./documents/item.mjs";
+import { SaltAndLeadActor } from "./documents/actor.mjs";
+import { SaltAndLeadItem } from "./documents/item.mjs";
 // Import sheet classes.
-import { SaltAndPowderActorSheet } from "./sheets/actor-sheet.mjs";
-import { SaltAndPowderItemSheet } from "./sheets/item-sheet.mjs";
+import { SaltAndLeadActorSheet } from "./sheets/actor-sheet.mjs";
+import { SaltAndLeadItemSheet } from "./sheets/item-sheet.mjs";
 // Import helper/utility classes and constants.
 import { preloadHandlebarsTemplates } from "./helpers/templates.mjs";
 import { SAP } from "./helpers/config.mjs";
@@ -16,9 +16,9 @@ Hooks.once('init', async function() {
 
   // Add utility classes to the global game object so that they're more easily
   // accessible in global contexts.
-  game.saltandpowder = {
-    SaltAndPowderActor,
-    SaltAndPowderItem,
+  game.saltandlead = {
+    SaltAndLeadActor,
+    SaltAndLeadItem,
     rollItemMacro
   };
 
@@ -26,14 +26,14 @@ Hooks.once('init', async function() {
   CONFIG.SAP = SAP;
 
   // Define custom Document classes
-  CONFIG.Actor.documentClass = SaltAndPowderActor;
-  CONFIG.Item.documentClass = SaltAndPowderItem;
+  CONFIG.Actor.documentClass = SaltAndLeadActor;
+  CONFIG.Item.documentClass = SaltAndLeadItem;
 
   // Register sheet application classes
   Actors.unregisterSheet("core", ActorSheet);
-  Actors.registerSheet("saltandpowder", SaltAndPowderActorSheet, { makeDefault: true });
+  Actors.registerSheet("saltandlead", SaltAndLeadActorSheet, { makeDefault: true });
   Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("saltandpowder", SaltAndPowderItemSheet, { makeDefault: true });
+  Items.registerSheet("saltandlead", SaltAndLeadItemSheet, { makeDefault: true });
 
   // Preload Handlebars templates.
   return preloadHandlebarsTemplates();
@@ -88,7 +88,7 @@ async function createItemMacro(data, slot) {
   const item = await Item.fromDropData(data);
 
   // Create the macro command using the uuid.
-  const command = `game.saltandpowder.rollItemMacro("${data.uuid}");`;
+  const command = `game.saltandlead.rollItemMacro("${data.uuid}");`;
   let macro = game.macros.find(m => (m.name === item.name) && (m.command === command));
   if (!macro) {
     macro = await Macro.create({
@@ -96,7 +96,7 @@ async function createItemMacro(data, slot) {
       type: "script",
       img: item.img,
       command: command,
-      flags: { "saltandpowder.itemMacro": true }
+      flags: { "saltandlead.itemMacro": true }
     });
   }
   game.user.assignHotbarMacro(macro, slot);

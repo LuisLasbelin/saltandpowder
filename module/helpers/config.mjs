@@ -6,7 +6,7 @@ export const SAP = {};
  */
 SAP.skills = {
   "steel": "SAP.Steel",
-  "powder": "SAP.Powder",
+  "lead": "SAP.Lead",
   "sea": "SAP.Sea",
   "earth": "SAP.Earth",
   "influence": "SAP.Influence",

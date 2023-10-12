@@ -4,13 +4,13 @@ import { onManageActiveEffect, prepareActiveEffectCategories } from "../helpers/
  * Extend the basic ActorSheet with some very simple modifications
  * @extends {ActorSheet}
  */
-export class SaltAndPowderActorSheet extends ActorSheet {
+export class SaltAndLeadActorSheet extends ActorSheet {
 
   /** @override */
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      classes: ["saltandpowder", "sheet", "actor"],
-      template: "systems/saltandpowder/templates/actor/actor-sheet.hbs",
+      classes: ["saltandlead", "sheet", "actor"],
+      template: "systems/saltandlead/templates/actor/actor-sheet.hbs",
       width: 600,
       height: 600,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "skills" }]
@@ -19,7 +19,7 @@ export class SaltAndPowderActorSheet extends ActorSheet {
 
   /** @override */
   get template() {
-    return `systems/saltandpowder/templates/actor/actor-${this.actor.type}-sheet.hbs`;
+    return `systems/saltandlead/templates/actor/actor-${this.actor.type}-sheet.hbs`;
   }
 
   /* -------------------------------------------- */

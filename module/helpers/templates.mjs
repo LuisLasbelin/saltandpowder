@@ -7,7 +7,7 @@
   return loadTemplates([
 
     // Actor partials.
-    "systems/saltandpowder/templates/actor/parts/actor-skills.hbs",
-    "systems/saltandpowder/templates/actor/parts/actor-items.hbs",
+    "systems/saltandlead/templates/actor/parts/actor-skills.hbs",
+    "systems/saltandlead/templates/actor/parts/actor-items.hbs",
   ]);
 };
